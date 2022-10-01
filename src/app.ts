@@ -1,17 +1,20 @@
-import express, { Request, Response, NextFunction } from "express";
+import * as express from "express";
+import { Request, Response } from "express";
 import helmet from "helmet";
 
 const app = express();
 
-// middlewares
+const PORT = 5000;
+
+//middlewares
 app.use(helmet());
 app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).json({ message: 'hi all' })
+app.get("/", (req: Request, res: Response) => {
+  res.send({
+    message: "hello world",
+  });
 });
-
-app.listen(5000, () => {
-  console.log(`Application listening at http://localhost:5000`);
+app.listen(PORT, () => {
+  console.log(`server started at http://localhost:${PORT}`);
 });
-

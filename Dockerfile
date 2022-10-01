@@ -7,6 +7,6 @@ WORKDIR /usr/local/bin/web
 COPY . /usr/local/bin/web/
 #Installs packages for Express framework. Runs in container root directory.
 RUN npm install
-
+RUN npm run build
 #Runs the app when container launches. Same as running in console
-CMD ["npm","run", "start:dev"]
+CMD ["npm", "start"]
