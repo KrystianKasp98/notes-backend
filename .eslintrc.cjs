@@ -53,5 +53,6 @@ module.exports = {
         exceptions: ["-", "+"],
       },
     ],
+    "@typescript-eslint/no-unsafe-call": 0,
   },
 };

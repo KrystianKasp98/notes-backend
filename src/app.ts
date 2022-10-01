@@ -1,16 +1,20 @@
 import * as express from "express";
 import {Request, Response} from "express";
+import * as dotenv from "dotenv";
 import helmet from "helmet";
-import cors from "cors";
+import cors = require("cors");
 
 const app = express();
+dotenv.config();
+const PORT = process.env.PORT || 4999;
 
-const PORT = 5000;
+if (process.env.NODE_ENV === "development") {
+  app.use(cors<Request>());
+}
 
 // middlewares
 app.use(helmet());
 app.use(express.json());
-app.use(cors);
 
 app.get("/", (req: Request, res: Response) => {
   res.send({
