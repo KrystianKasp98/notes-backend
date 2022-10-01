@@ -2,7 +2,7 @@ const path = require("path");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  entry: "./src/app.ts",
+  entry: "./src/index.ts",
   target: "node",
   output: {
     path: path.resolve(__dirname, "build"),
