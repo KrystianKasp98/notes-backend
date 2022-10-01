@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   root: true,
-  ignorePatterns: ["build/*", "webpack*", ".eslint*", "jest*", "test*"],
+  ignorePatterns: ["build/*", "webpack*", ".eslint*", "jest*"],
   rules: {
     "array-bracket-spacing": [2, "never"],
     "brace-style": [2, "1tbs"],

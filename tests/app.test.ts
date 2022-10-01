@@ -1,12 +1,10 @@
 import app from "../src/app";
-import * as supertest from "supertest";
+import * as request from "supertest";
+import {expect, describe, it} from "@jest/globals";
 
 describe("app", () => {
-  let request;
-  beforeEach(() => {
-    request = supertest(app);
-  });
-  it("should return a successful response for GET /", (done) => {
-    request.get("/").expect(200, done);
+  it("should return a successful response for GET /", async () => {
+    const res = await request(app).get("/");
+    expect(res.statusCode).toEqual(200);
   });
 });
