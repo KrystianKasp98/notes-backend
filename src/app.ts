@@ -1,12 +1,12 @@
 import * as express from "express";
-import { Request, Response } from "express";
+import {Request, Response} from "express";
 import helmet from "helmet";
 
 const app = express();
 
 const PORT = 5000;
 
-//middlewares
+// middlewares
 app.use(helmet());
 app.use(express.json());
 
