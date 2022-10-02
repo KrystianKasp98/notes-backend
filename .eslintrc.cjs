@@ -54,5 +54,7 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-unsafe-call": 0,
+    "@typescript-eslint/no-misused-promises": 0,
+    "@typescript-eslint/unbound-method": 0,
   },
 };

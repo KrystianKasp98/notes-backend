@@ -22,6 +22,14 @@ export default class MongoAPI {
       date: new Date(),
       edits: [],
     });
-    await noteDocument.save();
+    return await noteDocument.save(); // probably return required
+  }
+
+  static async getNote(id: string) {
+    return await Note.findById(id);
+  }
+
+  static async getNotes() {
+    return await Note.find({});
   }
 }
